@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	html, body{
+		background: url(img/bg.jpg);
+		overflow: hidden;
+		
+	}
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	ul{
+		list-style:none;
+	}
+	#container{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		-webkit-transform-origin:center center;
+	}
+	#container div{
+		position: absolute;
+		cursor: pointer;
+		border:6px solid #fff;
+		box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+		-webkit-transition:all 1.5s ease-out;
+		-moz-transition:all 1.5s ease-out;
+		-ms-transition:all 1.5s ease-out;
+		-o-transition:all 1.5s ease-out;
+		transition:all 1.5s ease-out;
+		-webkit-transform-origin:center center;
+	}
+	#container .big{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		border:1px solid #fff;
+		box-shadow: 0px 0px 2px rgba(0,0,0,0.4);
+	}
+	#container span{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		-webkit-transition:opacity 1.5s ease-in;
+		-moz-transition:opacity 1.5s ease-in;
+		-ms-transition:opacity 1.5s ease-in;
+		-o-transition:opacity 1.5s ease-in;
+		transition:opacity 1.5s ease-in;
+	}
+	#prev{
+		width: 50px;
+		height: 50px;
+		background: #fff;
+		border: 1px solid #000;
+		background: url(img/prev.png) no-repeat center center;
+		opacity: 0;
+		position: absolute;
+		left: -10px;
+		top: 50%;
+		border-radius: 10px;
+		-webkit-transition:opacity 2s ease;
+	}
+	#next{
+		width: 50px;
+		height: 50px;
+		background: #fff;
+		border: 1px solid #000;
+		background: url(img/next.png) no-repeat center center;
+		position: absolute;
+		left: 1330px;
+		top: 50%;
+		border-radius: 10px;
+		opacity: 0;
+		-webkit-transition:opacity 2s ease;
+	}
+</style>
+</head>
+<body>
+	<div id="container">
+	</div>
+	<a id="prev" href="javascript:;"></a>
+	<a id="next" href="javascript:;"></a>
+	<script>
+	(function(){
+		var oContainer = document.getElementById('container');
+		var oPrev = document.getElementById('prev');
+		var oNext = document.getElementById('next');
+		var ROW = 4,
+			COL = 6,
+			NUM = ROW * COL,
+			Big_Img_Width = 750,
+			Big_Img_Height = 500,
+			count = 0,
+			Thumbs_Img_Height = Thumbs_Img_Width = 125;
+			for(var i=1;i<=NUM;i++){
+				var oBigImg = new Image();//内置一个对象来预加载插入图片可能还没加载完就append进去 直接从缓存里读
+				oBigImg.onload = function(){
+					count ++;
+					if(count == NUM*2){
+						run();
+					}
+				}
+				oBigImg.src = 'img/' + i + '.jpg';
+				var oThumbImg = new Image();//内置一个对象来预加载插入图片可能还没加载完就append进去 直接从缓存里读
+				oThumbImg.onload = function(){
+					count ++;
+					if(count == NUM*2){
+						
+						run();
+					}
+				}
+				oThumbImg.src = 'img/thumbs/' + i + '.jpg';
+			}
+			var iColGap =(oContainer.offsetWidth - COL*125) /(COL + 1);
+			var iRowGap =(oContainer.offsetHeight - ROW*125) /(ROW + 1);
+			function run(){
+				var index = 0;//表示图片格子的索引
+				for(var i=0;i<ROW;i++){
+					for(var j = 0;j<COL;j++){
+						var oDiv = document.createElement('div');
+						oDiv.pos = {
+							row : i,
+							col : j
+						};
+						oDiv.index = index;
+						oDiv.matrix = {
+							col:j,
+							row:i
+						}
+						oDiv.style.left = (-Math.random()*300-200) + 'px';
+						oDiv.style.top = (-Math.random()*300-200) + 'px';
+						oDiv.className = '';
+						oDiv.style.top = + 'px';
+						oDiv.style.width =Thumbs_Img_Width + 'px';
+						oDiv.style.height =Thumbs_Img_Height + 'px';
+						oDiv.style.background = 'url(img/thumbs/'+(index+1)+'.jpg)';
+						
+						oDiv.innerHTML = '<span></span>';
+						oContainer.appendChild(oDiv);
+						index++;
+						
+					}
+				}
+				
+				
+			
+				var aImg = oContainer.getElementsByTagName('div');
+				index--; 
+				var timer = setInterval(function(){
+				var aImg = oContainer.getElementsByTagName('div');
+				aImg[index].style.left = ''+ (iColGap+ (aImg[index].pos.col)*(iColGap+125)) +'px';
+				aImg[index].style.top = ''+ (iRowGap+ (aImg[index].pos.row)*(iRowGap+125)) +'px';
+				aImg[index].style.WebkitTransform = 'rotate('+(Math.random()*40-20)+'deg)';
+				var bClicked = false;
+				aImg[index].onclick = function(e){
+
+					if(e.target.className == '' || e.target.tagName == 'SPAN' ){
+
+						if(bClicked){
+							for(i = 0;i<aImg.length;i++){
+								aImg[i].style.left = ''+ (iColGap+ (aImg[i].pos.col)*(iColGap+125)) +'px';
+								aImg[i].style.top = ''+ (iRowGap+ (aImg[i].pos.row)*(iRowGap+125)) +'px';
+								aImg[i].style.WebkitTransform = 'rotate('+(Math.random()*40-20)+'deg)';
+								var oSpan = aImg[i].getElementsByTagName('span')[0];
+								oSpan.style.opacity = '0';
+								aImg[i].className = '';
+
+							}
+						}else{
+							oPrev.style.opacity = 1;
+							oNext.style.opacity = 1;
+
+							var bigImgPos = {
+								left:(oContainer.offsetWidth - Big_Img_Width)/2,
+								top:(oContainer.offsetHeight - Big_Img_Height)/2
+
+							}
+							for(i = 0;i<aImg.length;i++){
+								var oSpan = aImg[i].getElementsByTagName('span')[0];
+								oSpan.style.background = 'url(img/'+ (this.index + 1) +'.jpg) ' 
+								+ (-aImg[i].matrix.col * Thumbs_Img_Width) + 'px ' + (-aImg[i].matrix.row * Thumbs_Img_Height)+ 'px';
+								oSpan.style.opacity = '1';
+								aImg[i].style.left = bigImgPos.left+aImg[i].matrix.col*(Thumbs_Img_Width + 1) + 'px';
+								aImg[i].style.top = bigImgPos.top+aImg[i].matrix.row*(Thumbs_Img_Height + 1) + 'px';
+								aImg[i].style.WebkitTransform = 'rotateY(0deg)';
+								aImg[i].className = 'big';	
+								aImg[i].style.opacity = '1';
+							}
+						}
+						bClicked = !bClicked;
+					}
+					var iNow = 0;
+					oNext.onclick = function(){
+							iNow++;
+							if(iNow == NUM){
+								iNow = 0;
+							}
+					var arr = [];
+					for(var i=0;i<NUM;i++){
+						arr.push(i);
+
+					}
+					arr.sort(function(){
+						return Math.random()-0.5;
+					});
+					var timer = setInterval(function(){
+						var item = arr.pop();
+						aImg[item].getElementsByTagName('span')[0].style.background = 'url(img/'+(iNow+1)+'.jpg) '+ (-aImg[item].matrix.col * Thumbs_Img_Width) + 'px ' + (-aImg[item].matrix.row * Thumbs_Img_Height)+ 'px';
+						if(arr.length == 0){
+							clearInterval(timer);
+						}
+					},30)
+						}
+					oPrev.onclick = function(){
+							iNow--;
+							if(iNow == -1){
+								iNow = NUM - 1;
+							}
+					}
+					
+				}
+					index--;
+					if(index==-1){
+						clearInterval(timer);
+					}
+					
+				},100);
+
+			};
+		})();
+			
+			
+	
+
+
+	// })();
+		
+
+	</script>
+</body>
+</html>
