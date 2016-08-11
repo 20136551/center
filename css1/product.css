@@ -1,0 +1,65 @@
+#intro{
+	height: 612px;
+}
+#white{
+	width: 1100px;
+	height: 52px;
+	margin: 0 auto;
+}
+#menu{
+	width: 502px;
+	height: 52px;
+	margin-left: 299px;
+	margin-top: 50px;
+	background: #F1f1f1;
+}
+#menu li{
+	float: left;
+	width: 154px;
+	height: 52px;
+	font-size: 14px;
+	font-weight: bolder;
+	line-height: 52px;
+	text-align: center;
+}
+#menu .invest{
+	margin-left: 20px;
+
+}
+#menu .tab:hover{
+	background: #EA3939;
+}
+
+#bottom{
+	width: 1100px;
+	height: 480px;
+	margin: 0 auto;
+	margin-top:40px;
+}
+#bottom .text{
+	text-align: center;
+	display: block;
+	color: black;
+}
+#intro .content{
+	padding: 20px 20px 50px 20px;
+	height: 320px;
+	width: 236px;
+	display: block;
+	border: 1px solid red;
+	float: left;
+	margin-right: 40px;
+	cursor: pointer;
+}
+
+#intro .content:hover{
+		border: 1px solid black;
+}
+#bottom .text1{
+	font-weight: bolder;
+	margin-top: 330px;
+	color: black;
+	position: absolute;
+	left: 260px;
+	top: 780px;
+}

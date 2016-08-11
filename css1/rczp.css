@@ -1,0 +1,52 @@
+#intro{
+	height: 644px;
+}
+#title {
+	font-weight: bold;
+	border-bottom: 1px solid #EA3939;
+	height: 26px;
+	line-height: 26px;	
+	font-size: 15px;
+	margin-top: 20px;
+
+}
+#title .title1{
+	float: left;
+}
+#title .title2{
+	display: block;
+	float: left;
+	padding-left: 10px;
+	margin-top: -4px;
+	color: black;
+}
+#left{
+	float: left;
+	background: url("../imgs/news/left.png");
+	width: 291px;
+	height: 342px;
+	margin-left: 30px;
+	margin-top: 70px;
+}
+#right{
+	float: left;
+	width: 688px;
+	height: 530px;
+	margin-left: 70px;
+	margin-top: 70px;
+	background: #F5f5f5;
+}
+#right .position{
+	height: 480px;
+	margin:0 auto; 
+	padding:10px 60px 10px 60px;
+}
+h2{
+	margin-bottom: 30px;
+	color: #ea3939;
+	text-align: center;
+}
+p{
+	font-size: 13px;
+	line-height: 25px;
+}

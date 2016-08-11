@@ -1,0 +1,91 @@
+#intro{
+	padding: 10px;
+}
+#left{
+	width: 290px;
+	height: 622px;
+	float: left;
+}
+#about-us .title{
+	border-bottom: 2px solid #EA3939;
+	display: block;
+	height: 25px;
+	color: #EA3939;
+	font-size: 14px;
+	font-weight: bold;
+}
+#company-intro{
+	width: 290px;
+	height: 215px;
+	margin-top: 5px;
+}
+#company-intro li{
+	border-bottom: 1px dotted #d0d0d0;
+	background: #efefef;
+	height: 40px;
+}
+#company-intro li a{
+	color: #EA3939;
+	font-weight: bolder;
+	font-size: 14px;
+	line-height: 40px;
+	display: block;
+	text-align: center;
+	width: 290px;
+	height: 40px;
+
+}
+#company-intro li a:hover{
+	color: black;
+	background: white;
+}
+
+#right{
+	width: 770px;
+	height: 1250px;
+	float: left;
+	margin-left: 40px;
+
+	
+}
+#content{
+	font-size: 14px;
+	padding: 8px 20px 10px 10px;
+	color: #5a5a5a;
+	width: 770px;
+	height: 1234px;
+	line-height: 25px;
+
+}
+#title2{
+	border-bottom: 2px solid black;
+	font-size: 14px;
+	display: block;
+	height: 25px;
+}
+#right .text1{
+	height: 144px;
+}
+#right .right-img{
+	float: right;
+}
+#right .text2{
+	margin-top: -20px;
+}
+#right .pageadmin{
+	font-weight: bold;
+}
+#right .item1{
+	margin-bottom: 100px;
+}
+#right .item3,.item4{
+	margin-top: 15px;
+	display: block;
+}
+#right .function{
+	font-weight: bold;
+}
+#right .thriteen{
+	display: block;
+	margin-bottom: 15px;
+}

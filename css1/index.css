@@ -1,0 +1,376 @@
+
+#intro{
+	width: 1100px;
+	height: 541px;
+	margin:0 auto;
+	margin-top: 20px;
+}
+
+#news{
+	width: 334px;
+	height: 174px;
+	float: left;
+}
+#title{
+	width: 334px;
+	height: 29px;
+	border-bottom: 2px solid #EA3939;
+}
+#company-news{
+	color: #EA3939;
+	font-size: 16px;
+	width: 260px;
+	height: 27px;
+	float: left;
+	margin-top: 5px;
+
+}
+#more{
+	float: left;
+	height: 27px;
+	width: 50px;
+
+}
+#more .more1{
+	color: #5A5A5A;
+	font-size: 15px;	
+	float: left;
+	margin-top: 8px;
+}
+#menu{
+	width: 334px;
+	height: 174px;
+	clear: both;
+}
+#menu li{
+	border-bottom: 1px dotted gray;
+	height: 29px;
+	line-height: 29px;
+	text-indent: 15px;
+}
+#menu a:hover{
+	color: #EA3939;
+}
+#m011 a:hover{
+	color: #EA3939;
+}
+#menu .news-title{
+	color: #5A5A5A;
+	font-size: 12px;
+	float: left;
+}
+.date{
+	font-size: 12px;
+	float: right;
+	color: #5A5A5A;
+}
+#intro2{
+	width: 334px;
+	height: 174px;
+	float: left;
+	margin-left: 40px;
+}
+#title2{
+	width: 334px;
+	height: 29px;
+	border-bottom: 2px solid black;
+}
+.xw2{
+	float: left;
+}
+#trends{
+	color: black;
+	font-size: 16px;
+	width: 260px;
+	height: 27px;
+	float: left;
+	margin-top: 5px;
+
+}
+
+#menu2{
+	width: 334px;
+	height: 174px;
+	clear: both;
+}
+#menu2 li{
+	border-bottom: 1px dotted gray;
+	height: 29px;
+	line-height: 29px;
+	text-indent: 15px;
+}
+#menu2 li a{
+	font-size: 12px;
+	color: #5A5A5A;
+}
+#menu2 a:hover{
+	color: #EA3939;
+}
+#f011 a:hover{
+	color: #EA3939;
+}
+
+#intro3{
+	width: 340px;
+	height: 171px;
+	float: left;
+	margin-left: 50px;
+}
+#section1{
+	width: 100px;
+	height: 171px;
+	float: left;
+	margin-right: 20px;
+}
+#section2{
+	width: 100px;
+	height: 171px;
+	float: left;
+	margin-right: 20px;
+}
+#section3{
+	width: 100px;
+	height: 171px;
+	float: left;
+}
+#question{
+	color:  #EA3939;
+	font-weight: bold;
+	margin-left: 15px;
+	margin-top: 10px;
+}
+#invest{
+	color: #EA3939;
+	font-weight: bold;
+	margin-left: 15px;
+	margin-top: 10px;
+}
+#stock{
+	color:  #EA3939;
+	font-weight: bold;
+	margin-left: 15px;
+	margin-top: 10px;
+}
+#financing{
+	color: #826682;
+	margin-left: 15px;
+	margin-top: 11px;
+}
+#funds{
+	color: #826682;
+	margin-left: -8px;
+	margin-top: 11px;
+	width: 140px;
+	height: 21px;
+
+}
+#equity{
+	color: #826682;
+	margin-left: 25px;
+	margin-top: 11px;
+}
+.image1{
+	background: url('../imgs/index/sy_tz_1.jpg');
+	height: 125px;
+	width: 94px;
+	display: block;
+	cursor: default;
+}
+#section1  .image1:hover{
+	 background: url('../imgs/index/sy_tz_1_h.jpg');
+}
+.image2{
+	background: url('../imgs/index/sy_tz_2.jpg');
+	height: 125px;
+	width: 94px;
+	display: block;
+	cursor:default;
+}
+#section2  .image2:hover{
+	 background: url('../imgs/index/sy_tz_2_h.jpg');
+}
+
+.image3{
+	background: url('../imgs/index/sy_tz_3.jpg');
+	height: 125px;
+	width: 94px;
+	display: block;
+	cursor: default;
+}
+#section3  .image3:hover{
+	 background: url('../imgs/index/sy_tz_3_h.jpg');
+}
+#intro4{
+	clear: both;
+	position: relative;
+	width: 298px;
+	height: 140px;
+}
+
+.image4{
+	width: 298px;
+	height: 135px;
+	margin-top: 20px;
+}
+
+#background2{
+	background: #EA3939;  
+	width: 61px;
+	height: 76px;
+	position: absolute;
+	left: 30px;
+	top: 20px;
+	font-size: 18px;
+
+}
+#About{
+	font-size: 18px;
+	display:block;
+	color: white;
+	width: 39px;
+	height: 66px;
+	display: block;
+	position: absolute;
+	left: 40px;
+	top: 27px;ss
+
+}
+#us{
+	font-size: 18px;
+	display:block;
+	color: white;
+	width: 39px;
+	height: 66px;
+	display: block;
+	position: absolute;
+	left: 40px;
+	top: 60px;
+	
+}
+#About-us{
+	background:black;  
+	width: 61px;
+	height: 25px;
+	position: absolute;
+	left: 30px;
+	top: 130px;
+	font-size: 12px;
+	display: inline-block;
+	color: white;
+	line-height: 25px;
+	text-indent: 4px;
+}
+#introdution{
+	
+	height: 135px;
+	font-size: 12px;
+	color:#5A5A5A;
+	border: 1px solid #cccccc;
+	margin-top: -4px;
+	line-height: 22px;
+	padding: 20px 10px 30px 10px;	
+}
+#intro5{
+	width: 276px;
+	height: 321px;
+	position: relative;
+	top: -120px;
+	left: 310px;
+	background: #F1F1F1;
+
+}
+#all{
+	width: 236px;
+	height: 275px;
+	position: relative;
+	top: 25px;
+	left: 25px;
+
+}
+#paragraph1{
+	color: #EA3939;
+	font-size: 15px;
+	margin-bottom: 10px;
+	font-family: "Microsoft YaHei";
+
+}
+#paragraph2{
+	color: black;
+	line-height: 30px;
+	font-size: 13px;
+	font-family: "Microsoft YaHei";
+}
+#paragraph3{
+	color: #EA3939;
+	font-size: 12px;
+	margin-top: 5px;
+	font-family: "Microsoft YaHei";
+}
+#all .paragraph-img{
+	padding-left: 50px;
+	padding-top: 5px;
+}
+#intro6{
+	position: relative;
+	left: 610px;
+	top: -441px;
+}
+#address{
+	background: #F1F1F1;
+	margin-bottom: 15px;
+	width: 505px;
+	height: 153px;
+}
+#recruit{
+	background: #F1F1F1;
+	width: 505px;
+	height: 153px;
+}
+#contact-img{
+	background-image: url("../imgs/index/call_t.png");
+	width: 202px;
+	height: 120px;
+	float: left;
+	margin-top: 10px;
+}
+#contact-number{
+	line-height: 30px;
+	margin-top: 17px;
+	margin-left: 40px;
+	float: left;
+	font-family: "Microsoft YaHei";
+	font-size: 14px;
+	color: #5c5c5c;
+}
+#recruit-img{
+	background-image: url("../imgs/index/zp_t.png");
+	width: 153px;
+	height: 153px;
+	float: left;
+
+}
+#recruit-text{
+	width: 315px;
+	height: 60px;
+	margin-left: 172px;
+	font-family: "Microsoft YaHei";	
+}
+#recruit-text1{
+	line-height: 30px;
+	font-size: 12px;
+	position: relative;
+	top: 20px;
+	font-family: "Microsoft YaHei";
+}
+#recruit-text2{
+	color: #EA3939;
+	font-size: 14px;
+	margin-top: 28px;
+	font-family: "Microsoft YaHei";
+
+}
+#watch{
+	color: #EA3939;
+	font-family: "Microsoft YaHei";
+	font-size: 12px;
+}

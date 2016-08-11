@@ -1,0 +1,76 @@
+#intro{
+	padding: 10px;
+}
+#left{
+	width: 290px;
+	height: 622px;
+	float: left;
+}
+#about-us .title{
+	border-bottom: 2px solid #EA3939;
+	display: block;
+	height: 25px;
+	color: #EA3939;
+	font-size: 14px;
+	font-weight: bold;
+}
+#company-intro{
+	width: 290px;
+	height: 215px;
+	margin-top: 5px;
+}
+#company-intro li{
+	border-bottom: 1px dotted #d0d0d0;
+	background: #efefef;
+	height: 40px;
+}
+#company-intro li a{
+	color: #EA3939;
+	font-weight: bolder;
+	font-size: 14px;
+	line-height: 40px;
+	display: block;
+	text-align: center;
+	width: 290px;
+	height: 40px;
+
+}
+#company-intro li a:hover{
+	color: black;
+	background: white;
+}
+
+#right{
+	width: 770px;
+	height: 1250px;
+	float: left;
+	margin-left: 40px;
+}
+#title2{
+	border-bottom: 2px solid black;
+	font-size: 14px;
+	display: block;
+	height: 25px;
+}
+#menu{
+	width: 770px;
+	height: 224px;
+	line-height: 37px;
+
+}
+#menu li{
+	width: 750px;
+	height: 37px;
+	border-bottom: 1px dotted #5a5a5a;	
+}
+#menu a{
+	margin-left: 10px;
+	color: #5a5a5a;
+}
+#menu a:hover{
+	color: red;
+}
+#menu .date{
+	float: right;
+	color: #5a5a5a;
+}
